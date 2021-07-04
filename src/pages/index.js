@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
-import styles from "./../../styles/Home.module.scss";
-
+import styles from "./../styles/Home.module.scss";
+import Post from "../components/Post/Post";
+import AddPostForm from "../components/AddPostForm/AddPostForm";
 export default function Home() {
   return (
     <div className={styles["home"]}>
@@ -16,41 +17,20 @@ export default function Home() {
           <h1 className={styles.title}>My Post</h1>
         </main>
         <ul className={styles["tweets-list"]}>
-          <li>
-            <p className={styles["content"]}>
-              I'm working in figma trying to design a new website that load my
-              tweets
-            </p>
-            <p className={styles["date"]}>2/27/2077</p>
-          </li>
-
-          <li>
-            <p className={styles["content"]}>
-              I'm working in figma trying to design a new website that load my
-              tweets
-            </p>
-            <p className={styles["date"]}>2/27/2077</p>
-          </li>
-
-          <li>
-            <p className={styles["content"]}>
-              I'm working in figma trying to design a new website that load my
-              tweets
-            </p>
-            <p className={styles["date"]}>2/27/2077</p>
-          </li>
+          <Post
+            content={'This is my tweet it is very cool and I"m making cool app'}
+            date={"02/07/2077"}
+          />
+          <Post
+            content={'This is my tweet it is very cool and I"m making cool app'}
+            date={"02/07/2077"}
+          />
+          <Post
+            content={'This is my tweet it is very cool and I"m making cool app'}
+            date={"02/07/2077"}
+          />
         </ul>
-
-        <form className={styles["add-post-form"]}>
-          <textarea></textarea>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-          >
-            Add New Post
-          </motion.button>
-        </form>
+        <AddPostForm />
       </div>
     </div>
   );
