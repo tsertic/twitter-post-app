@@ -5,7 +5,10 @@ const Post = ({ content, date }) => {
   return (
     <li className={styles["post"]}>
       <p className={styles["content"]}>{content}</p>
-      <p className={styles["date"]}>{date}</p>
+      <div className={styles["sub-post"]}>
+        <i class="fas fa-heart"></i>
+        <p className={styles["date"]}>{date}</p>
+      </div>
     </li>
   );
 };
